@@ -48,4 +48,6 @@ map j gj
 map k gk
 
 
-
+"airline
+set laststatus=2
+let g:airline_theme='luna'
