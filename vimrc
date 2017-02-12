@@ -1,35 +1,33 @@
-"Fileencoding
-if has("multi_byte")
-  if &termencoding == ""
-    let &termencoding = &encoding
-  endif
-  set encoding=utf-8
-  setglobal fileencoding=utf-8
-  "setglobal bomb
-  set fileencodings=ucs-bom,utf-8,latin1
-endif
-
-
-
-"set relativenumber
+"General stuff
+""appearance
+colorscheme monokai
 set number
 set cursorline
-colorscheme monokai
+""filetype
 set nocompatible
-syntax enable
 filetype plugin on
 filetype indent on
-
+""syntax
 syntax on
 set foldmethod=syntax
+""set file directory to working direction 
+set autochdir
 
 
-"leaders
+"Indents
+set smartindent
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+
+"Leaders
 let maplocalleader=","
 let mapleader=","
 
 
-"Disable arrow keys
+"Mappings
+""disable cursors
 imap <Up> <NOP>
 imap <Down> <NOP>
 imap <Left> <NOP>
@@ -39,26 +37,15 @@ nmap <Up> <NOP>
 nmap <Down> <NOP>
 nmap <Left> <NOP>
 nmap <Right> <NOP>
-
+"tabswitch
 nmap <Tab> <C-W>
-"tab switch with tab 
-imap <Tab> <C-N> 
 
 "insert lines without entering insert mode
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
 
-
 map j gj
 map k gk
 
 
-"indents
-set smartindent
-set tabstop=4
-set shiftwidth=4
-set expandtab
-
-"set file directory to working direction 
-set autochdir
 
