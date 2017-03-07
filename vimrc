@@ -47,8 +47,14 @@ nmap <CR> o<Esc>
 map j gj
 map k gk
 
+"PLUGINS
 
 "airline
 set laststatus=2
 let g:airline_theme='luna'
 let g:airline_powerline_fonts = 1
+
+"vCoolor
+let g:vcoolor_disable_mappings = 1
+let g:vcoolor_map = '<F8>'
+
