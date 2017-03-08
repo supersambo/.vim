@@ -58,3 +58,5 @@ let g:airline_powerline_fonts = 1
 let g:vcoolor_disable_mappings = 1
 let g:vcoolor_map = '<F8>'
 
+"slime
+let g:slime_target = "tmux"
