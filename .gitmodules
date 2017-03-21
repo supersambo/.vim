@@ -1,0 +1,3 @@
+[submodule "pack/plugins/start/nerdcommenter"]
+	path = pack/plugins/start/nerdcommenter
+	url = git@github.com:scrooloose/nerdcommenter.git
