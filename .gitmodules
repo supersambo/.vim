@@ -10,3 +10,6 @@
 [submodule "pack/plugins/start/vCoolor.vim"]
 	path = pack/plugins/start/vCoolor.vim
 	url = git@github.com:KabbAmine/vCoolor.vim.git
+[submodule "pack/plugins/start/vim-airline"]
+	path = pack/plugins/start/vim-airline
+	url = https://github.com/vim-airline/vim-airline
