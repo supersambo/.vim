@@ -7,3 +7,6 @@
 [submodule "pack/plugins/start/Nvim-R"]
 	path = pack/plugins/start/Nvim-R
 	url = git@github.com:jalvesaq/Nvim-R.git
+[submodule "pack/plugins/start/vCoolor.vim"]
+	path = pack/plugins/start/vCoolor.vim
+	url = git@github.com:KabbAmine/vCoolor.vim.git
