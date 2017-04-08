@@ -40,3 +40,6 @@
 [submodule "pack/plugins/start/goyo.vim"]
 	path = pack/plugins/start/goyo.vim
 	url = git@github.com:junegunn/goyo.vim.git
+[submodule "pack/plugins/start/ctrlp.vim"]
+	path = pack/plugins/start/ctrlp.vim
+	url = git@github.com:kien/ctrlp.vim.git
