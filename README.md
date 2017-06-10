@@ -1,7 +1,7 @@
 #Vim setup
-This is my personal vm setup. It's everything but sophisticated, just using this to get my basic  vim settings synced across various machines. 
+This is my personal vim setup. It's everything but sophisticated, I'm just using this to get my basic vim settings synced across various machines. 
 
-Using vim 8's native package handling instead of pathogen now.
+Using vim 8's native package handling instead of pathogen now!
 
 To install this use...
 ```
@@ -10,3 +10,11 @@ To install this use...
 ```
 
 ...in home directory.
+
+Add plugins as submodules like so:
+
+```
+cd ~/.vim/pack/plugins/start
+git submodule add git@github.com:wincent/command-t.git
+
+```

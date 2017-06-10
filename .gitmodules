@@ -43,3 +43,6 @@
 [submodule "pack/plugins/start/ctrlp.vim"]
 	path = pack/plugins/start/ctrlp.vim
 	url = git@github.com:kien/ctrlp.vim.git
+[submodule "pack/plugins/start/command-t"]
+	path = pack/plugins/start/command-t
+	url = git@github.com:wincent/command-t.git
