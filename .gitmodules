@@ -46,3 +46,6 @@
 [submodule "pack/plugins/start/command-t"]
 	path = pack/plugins/start/command-t
 	url = git@github.com:wincent/command-t.git
+[submodule "pack/plugins/start/vim-game-code-break"]
+	path = pack/plugins/start/vim-game-code-break
+	url = https://github.com/johngrib/vim-game-code-break.git
