@@ -62,4 +62,8 @@ let g:vcoolor_map = '<F8>'
 let g:slime_target = "tmux"
 let g:slime_python_ipython = 1
 
-command Play VimGameCodeBreak
+"latex-suite
+let g:Tex_BibtexFlavor = 'biber'
+let g:Tex_DefaultTargetFormat="dvi"
+let g:Tex_MultipleCompileFormats='pdf,dvi'
+imap <leader>c \cite{
