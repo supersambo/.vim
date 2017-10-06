@@ -64,6 +64,6 @@ let g:slime_python_ipython = 1
 
 "latex-suite
 let g:Tex_BibtexFlavor = 'biber'
-let g:Tex_DefaultTargetFormat="dvi"
+let g:Tex_DefaultTargetFormat="pdf"
 let g:Tex_MultipleCompileFormats='pdf,dvi'
 imap <leader>c \cite{
