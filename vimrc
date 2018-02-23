@@ -47,6 +47,9 @@ nmap <CR> o<Esc>
 map j gj
 map k gk
 
+"Python 
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+
 "PLUGINS
 
 "airline
@@ -57,6 +60,7 @@ let g:airline_powerline_fonts = 1
 "vCoolor
 let g:vcoolor_disable_mappings = 1
 let g:vcoolor_map = '<F8>'
+let g:vcool_ins_hsl_map = '<F9>'
 
 "slime
 let g:slime_target = "tmux"
