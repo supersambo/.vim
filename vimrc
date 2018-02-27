@@ -51,6 +51,13 @@ map k gk
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 
 "PLUGINS
+"mucomplete
+set completeopt+=menuone
+set completeopt+=noselect
+set completeopt+=noinsert
+set shortmess+=c   " Shut off completion messages
+set belloff+=ctrlg " If Vim beeps during completion
+let g:mucomplete#enable_auto_at_startup = 1
 
 "airline
 set laststatus=2

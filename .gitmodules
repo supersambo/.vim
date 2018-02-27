@@ -49,3 +49,6 @@
 [submodule "pack/plugins/start/vim-game-code-break"]
 	path = pack/plugins/start/vim-game-code-break
 	url = https://github.com/johngrib/vim-game-code-break.git
+[submodule "pack/plugins/start/vim-mucomplete"]
+	path = pack/plugins/start/vim-mucomplete
+	url = git@github.com:lifepillar/vim-mucomplete.git
