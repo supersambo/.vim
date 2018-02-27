@@ -52,3 +52,6 @@
 [submodule "pack/plugins/start/vim-mucomplete"]
 	path = pack/plugins/start/vim-mucomplete
 	url = git@github.com:lifepillar/vim-mucomplete.git
+[submodule "pack/plugins/start/vim-notmuch-address"]
+	path = pack/plugins/start/vim-notmuch-address
+	url = git@github.com:adborden/vim-notmuch-address.git

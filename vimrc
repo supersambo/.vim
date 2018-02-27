@@ -59,6 +59,10 @@ set shortmess+=c   " Shut off completion messages
 set belloff+=ctrlg " If Vim beeps during completion
 let g:mucomplete#enable_auto_at_startup = 1
 
+au FileType mail setlocal completeopt=menuone,noselect,noinsert
+let g:mucomplete#chains = { 'mail': [ 'user', 'ulti' ] }
+
+
 "airline
 set laststatus=2
 let g:airline_theme='luna'
