@@ -1,6 +1,10 @@
 "General stuff
 ""appearance
 colorscheme monokai
+"hi NonText ctermbg=none 
+"hi Normal guibg=NONE ctermbg=NONE
+hi Normal ctermfg=252 ctermbg=NONE
+
 set number
 set cursorline
 ""filetype
@@ -37,6 +41,7 @@ nmap <Up> <NOP>
 nmap <Down> <NOP>
 nmap <Left> <NOP>
 nmap <Right> <NOP>
+
 "tabswitch
 nmap <Tab> <C-W>
 
@@ -81,4 +86,5 @@ let g:slime_python_ipython = 1
 let g:Tex_BibtexFlavor = 'biber'
 let g:Tex_DefaultTargetFormat="pdf"
 let g:Tex_MultipleCompileFormats='pdf,dvi'
+let g:Tex_ViewRule_pdf='zathura'
 imap <leader>c \cite{
