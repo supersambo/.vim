@@ -67,6 +67,8 @@ let g:mucomplete#enable_auto_at_startup = 1
 au FileType mail setlocal completeopt=menuone,noselect,noinsert
 let g:mucomplete#chains = { 'mail': [ 'user', 'ulti' ] }
 
+"NvimR
+let R_term = 'urxvt'
 
 "airline
 set laststatus=2
@@ -80,7 +82,7 @@ let g:vcool_ins_hsl_map = '<F9>'
 
 "slime
 let g:slime_target = "tmux"
-let g:slime_python_ipython = 1
+"let g:slime_python_ipython = 1
 
 "latex-suite
 let g:Tex_BibtexFlavor = 'biber'
