@@ -55,3 +55,12 @@
 [submodule "pack/plugins/start/vim-notmuch-address"]
 	path = pack/plugins/start/vim-notmuch-address
 	url = git@github.com:adborden/vim-notmuch-address.git
+[submodule "pack/plugins/start/emmet-vim"]
+	path = pack/plugins/start/emmet-vim
+	url = git@github.com:mattn/emmet-vim.git
+[submodule "pack/plugins/start/wal.vim"]
+	path = pack/plugins/start/wal.vim
+	url = git@github.com:dylanaraps/wal.vim.git
+[submodule "pack/plugins/start/vim-mail"]
+	path = pack/plugins/start/vim-mail
+	url = git@github.com:vim-scripts/vim-mail.git
