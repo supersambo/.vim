@@ -1,12 +1,15 @@
 "General stuff
 ""appearance
 colorscheme monokai
+autocmd FileType tex colorscheme wal
+autocmd FileType mail colorscheme wal
+"colorscheme wal
 "hi NonText ctermbg=none 
 "hi Normal guibg=NONE ctermbg=NONE
 hi Normal ctermfg=252 ctermbg=NONE
 
 set number
-set cursorline
+"set cursorline
 ""filetype
 set nocompatible
 filetype plugin on
@@ -68,17 +71,17 @@ au FileType mail setlocal completeopt=menuone,noselect,noinsert
 let g:mucomplete#chains = { 'mail': [ 'user', 'ulti' ] }
 
 "NvimR
-let R_term = 'urxvt'
+"let R_term = 'gnome-terminal' 
+let R_term = 'urxvt' 
 
 "airline
 set laststatus=2
 let g:airline_theme='luna'
-let g:airline_powerline_fonts = 1
+"let g:airline_powerline_fonts = 1
 
 "vCoolor
 let g:vcoolor_disable_mappings = 1
 let g:vcoolor_map = '<F8>'
-let g:vcool_ins_hsl_map = '<F9>'
 
 "slime
 let g:slime_target = "tmux"
@@ -90,3 +93,16 @@ let g:Tex_DefaultTargetFormat="pdf"
 let g:Tex_MultipleCompileFormats='pdf,dvi'
 let g:Tex_ViewRule_pdf='zathura'
 imap <leader>c \cite{
+
+
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=Inconsolata\ 11
+  elseif has("gui_gtk3")
+    set guifont=Inconsolata\ 11
+  elseif has("gui_macvim")
+    set guifont=Menlo\ Regular:h14
+  elseif has("gui_win32")
+    set guifont=Consolas:h11:cANSI
+  endif
+endif
