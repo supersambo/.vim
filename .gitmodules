@@ -61,6 +61,12 @@
 [submodule "pack/plugins/start/wal.vim"]
 	path = pack/plugins/start/wal.vim
 	url = git@github.com:dylanaraps/wal.vim.git
-[submodule "pack/plugins/start/vim-mail"]
-	path = pack/plugins/start/vim-mail
-	url = git@github.com:vim-scripts/vim-mail.git
+[submodule "pack/plugins/start/colorv.vim"]
+	path = pack/plugins/start/colorv.vim
+	url = git@github.com:gu-fan/colorv.vim.git
+[submodule "pack/plugins/start/colorizer"]
+	path = pack/plugins/start/colorizer
+	url = git@github.com:lilydjwg/colorizer.git
+[submodule "pack/plugins/start/jedi-vim"]
+	path = pack/plugins/start/jedi-vim
+	url = git@github.com:davidhalter/jedi-vim.git
