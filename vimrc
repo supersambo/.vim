@@ -13,6 +13,7 @@ set number
 set nocompatible
 filetype plugin on
 filetype indent on
+set modelines=5
 ""syntax
 syntax on
 set foldmethod=syntax
@@ -54,6 +55,11 @@ nmap <CR> o<Esc>
 map j gj
 map k gk
 
+"VimDiff Wrap lines
+au VimEnter * if &diff | execute 'windo set wrap' | endif
+highlight DiffChange cterm=none ctermfg=fg ctermbg=Red gui=none guifg=fg guibg=Red
+"highlight Normal term=none cterm=none ctermfg=White ctermbg=Black gui=none guifg=White guibg=Black
+
 "Python 
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 
@@ -76,6 +82,8 @@ let g:mucomplete#chains = { 'mail': [ 'user', 'ulti' ] }
 autocmd FileType mail colorscheme wal
 let g:netrw_browsex_viewer= "qutebrowser"
 
+"vim-mail
+let g:VimMailSpellLangs=['de', 'en', 'sp']
 
 " mutt: insert attachment with ranger
 fun! RangerMuttAttach()
