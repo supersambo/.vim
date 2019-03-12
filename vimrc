@@ -102,10 +102,19 @@ map <C-a> magg/Reply-To<CR><ESC>:call RangerMuttAttach()<CR>`a
 imap <C-a> <ESC>magg/Reply-To<CR><ESC>:call RangerMuttAttach()<CR>`aa
 
 
+"Goyo
+map <leader>g :Goyo <enter>
+
+"NERDTree
+map <leader>o :NERDTreeToggle <enter>
+
 "NvimR
-"let R_term = 'gnome-terminal' 
-let R_term = 'urxvt' 
-"let R_term_cmd = 'termite'
+let R_nvimpager = "vertical"
+let R_in_buffer = 0
+"let R_term = 'urxt'
+"let R_term_cmd = 'urxvt -e'
+"let R_term_cmd = 'termite -e'
+
 
 "airline
 set laststatus=2

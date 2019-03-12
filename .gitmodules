@@ -76,3 +76,6 @@
 [submodule "pack/plugins/start/i3config.vim"]
 	path = pack/plugins/start/i3config.vim
 	url = git@github.com:mboughaba/i3config.vim.git
+[submodule "pack/plugins/start/rainbow_csv"]
+	path = pack/plugins/start/rainbow_csv
+	url = git@github.com:mechatroner/rainbow_csv.git
