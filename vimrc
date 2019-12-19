@@ -67,13 +67,10 @@ nmap <C-L> )
 map j gj
 map k gk
 
-for i in range(97,122)
-  let c = nr2char(i)
-  exec "map \e".c." <M-".c.">"
-  exec "map! \e".c." <M-".c.">"
-endfor
-nnoremap <ALT-j> :tabprevious<CR>
-nnoremap <ALT-k> :tabnext<CR>
+execute "set <M-j>=\ej"
+nnoremap <M-j> :tabprevious<CR>
+execute "set <M-k>=\ek"
+nnoremap <M-k> :tabnext<CR>
 
 
 
