@@ -67,9 +67,6 @@
 [submodule "pack/plugins/start/colorizer"]
 	path = pack/plugins/start/colorizer
 	url = git@github.com:lilydjwg/colorizer.git
-[submodule "pack/plugins/start/jedi-vim"]
-	path = pack/plugins/start/jedi-vim
-	url = git@github.com:davidhalter/jedi-vim.git
 [submodule "pack/plugins/start/--force"]
 	path = pack/plugins/start/--force
 	url = git@github.com:dbeniamine/vim-mail.git
@@ -79,3 +76,9 @@
 [submodule "pack/plugins/start/rainbow_csv"]
 	path = pack/plugins/start/rainbow_csv
 	url = git@github.com:mechatroner/rainbow_csv.git
+[submodule "pack/plugins/start/thesaurus_query.vim"]
+	path = pack/plugins/start/thesaurus_query.vim
+	url = git@github.com:Ron89/thesaurus_query.vim.git
+[submodule "pack/plugins/start/limelight.vim"]
+	path = pack/plugins/start/limelight.vim
+	url = git@github.com:junegunn/limelight.vim.git

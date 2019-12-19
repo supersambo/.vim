@@ -1,7 +1,10 @@
 "General stuff
+"
+"get used to jj 
+"inoremap <esc>   <NOP>
+"
 ""appearance
 colorscheme monokai
-autocmd FileType tex colorscheme wal
 "colorscheme wal
 "hi NonText ctermbg=none 
 "hi Normal guibg=NONE ctermbg=NONE
@@ -27,11 +30,14 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+"Esc alternatives
+inoremap jj <ESC>
+inoremap kk <ESC>
+
 
 "Leaders
 let maplocalleader=","
 let mapleader=","
-
 
 "Mappings
 ""disable cursors
@@ -52,16 +58,34 @@ nmap <Tab> <C-W>
 nmap <S-Enter> O<Esc>
 nmap <CR> o<Esc>
 
+
+nmap <C-J> }
+nmap <C-K> {
+nmap <C-H> (
+nmap <C-L> )
+
 map j gj
 map k gk
+
+for i in range(97,122)
+  let c = nr2char(i)
+  exec "map \e".c." <M-".c.">"
+  exec "map! \e".c." <M-".c.">"
+endfor
+nnoremap <ALT-j> :tabprevious<CR>
+nnoremap <ALT-k> :tabnext<CR>
+
+
+
+"map <c-w> gF
 
 "VimDiff Wrap lines
 au VimEnter * if &diff | execute 'windo set wrap' | endif
 highlight DiffChange cterm=none ctermfg=fg ctermbg=Red gui=none guifg=fg guibg=Red
-"highlight Normal term=none cterm=none ctermfg=White ctermbg=Black gui=none guifg=White guibg=Black
 
 "Python 
 autocmd FileType python set omnifunc=pythoncomplete#Complete
+
 
 "PLUGINS
 "colorizer
@@ -78,12 +102,20 @@ set belloff+=ctrlg " If Vim beeps during completion
 let g:mucomplete#enable_auto_at_startup = 1
 au FileType mail setlocal completeopt=menuone,noselect,noinsert
 let g:mucomplete#chains = { 'mail': [ 'user', 'ulti' ] }
+autocmd FileType tex MUcompleteAutoOff
 
 autocmd FileType mail colorscheme wal
+autocmd FileType tex colorscheme wal
 let g:netrw_browsex_viewer= "qutebrowser"
 
 "vim-mail
 let g:VimMailSpellLangs=['de', 'en', 'sp']
+
+"Spell check
+map <leader>se :set spell spelllang=en_us <enter>
+map <leader>sd :set spell spelllang=de_de <enter>
+"map <leader>ss :set spell spelllang=es_ec <enter>
+map <leader>S :set nospell
 
 " mutt: insert attachment with ranger
 fun! RangerMuttAttach()
@@ -104,22 +136,40 @@ imap <C-a> <ESC>magg/Reply-To<CR><ESC>:call RangerMuttAttach()<CR>`aa
 
 "Goyo
 map <leader>g :Goyo <enter>
+autocmd! User GoyoEnter Limelight
+autocmd! User GoyoLeave Limelight!
+let g:limelight_default_coefficient = 0.4
+let g:goyo = 90
 
 "NERDTree
-map <leader>o :NERDTreeToggle <enter>
+"map <leader>o :NERDTreeToggle <enter>
+"let NERDTreeQuitOnOpen = 1
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+
+
+let g:tq_thesaurus_com_do_not_prompt_for_install=1
+map <leader>t <Plug>ThesaurusQueryReplaceCurrentWord
+
+"nnoremap <leader>t :ThesaurusQueryReplaceCurrentWord<CR>
 
 "NvimR
-let R_nvimpager = "vertical"
+let R_nvimpager = 'horizontal'
 let R_in_buffer = 0
-"let R_term = 'urxt'
-"let R_term_cmd = 'urxvt -e'
-"let R_term_cmd = 'termite -e'
+let R_term_cmf = 'gnome-terminal'
+"let R_term = 'st'
+"let R_term_cmd = 'gnome-terminal -e'
+"let R_term = 'termite'
+""let R_term_cmd = 'termite -e'
 
 
 "airline
 set laststatus=2
 let g:airline_theme='luna'
 let g:airline_powerline_fonts = 1
+let g:airline#extensions#wordcount#enabled = 1
+let g:airline#extensions#wordcount#filetypes = '\vnotes|help|markdown|rst|org|text|asciidoc|tex|mail'
+
 
 "vCoolor
 let g:vcoolor_disable_mappings = 1
@@ -134,10 +184,13 @@ let g:Tex_BibtexFlavor = 'biber'
 let g:Tex_DefaultTargetFormat="pdf"
 let g:Tex_MultipleCompileFormats='pdf,dvi'
 let g:Tex_ViewRule_pdf='zathura'
-imap <leader>c \cite{
-imap <leader>C \cite{<F9>
+imap <leader>C \cite{
+imap <leader>c \cite{<F9>
+"autocmd FileType tex colorscheme wal
 
 
+
+" fonts
 if has("gui_running")
   if has("gui_gtk2")
     set guifont=Inconsolata\ 11
