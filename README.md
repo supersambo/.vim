@@ -18,3 +18,10 @@ cd ~/.vim/pack/plugins/start
 git submodule add git@github.com:wincent/command-t.git
 
 ```
+
+Update all submodules :
+
+```
+git submodule update --recursive --remote
+
+```
